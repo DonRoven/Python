@@ -9,5 +9,11 @@ for k, v in zip(list1,list2):
         cities[k].append(v) 
     else:
         cities[k] = [v]
+for k, v in zip(list1,list2):
+    if k not in cities:
+        if v in cities:
+            cities[v].append(k) 
+        else:
+            cities[v] = [k]
     
 print (cities)
