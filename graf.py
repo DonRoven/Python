@@ -5,7 +5,7 @@ def create_citis(city1,city2, n):
     list2 = [random.randint(1, n) for i in range(n*2)]
     return (list1, list2)
 
-def cities_path(list1, list2):
+def cities_network(list1, list2):
     cities = {}
     for k, v in zip(list1,list2):
         if k in cities:
