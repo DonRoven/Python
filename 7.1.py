@@ -18,7 +18,7 @@ class Sphere():
         return (self.r)
     
     def get_center(self):
-        return ((x, y, z))
+        return ((self.x, self.y, self.z))
 
     def set_radius(self, r):
         self.r = r
