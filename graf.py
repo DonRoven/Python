@@ -1,8 +1,8 @@
 import random
 
-def create_citis(city1,city2, n):
-    list1 = [random.randint(1, n) for i in range(n*2)]
-    list2 = [random.randint(1, n) for i in range(n*2)]
+def create_citis(n):
+    list1 = [random.randint(1, n) for i in range(n*3)]
+    list2 = [random.randint(1, n) for i in range(n*3)]
     return (list1, list2)
 
 def cities_network(list1, list2):
@@ -36,11 +36,10 @@ def check_path(city1, city2, cities):
         return None
     for node in cities[city1]:
         if node not in path:
-            newpath = find_pach(graf, city1, city2)
+            newpath = check_path(city1, city2, cities)
             if newpath:
                 return newpath
     return None
 
+print check_path(8, 15, cities_network(*create_citis(20)))
 
-
-print (create_citis(6, 12, 20))
